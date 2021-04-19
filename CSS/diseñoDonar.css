@@ -1,0 +1,41 @@
+article{
+    background-color: #ffffff ;
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+    float: center;
+  padding: 100px;
+  width: 100%;
+
+}
+
+
+
+
+
+body{
+
+  background-image: url(https://i.ibb.co/1XZpSHH/3955269.jpg);
+
+
+
+
+}
+
+.profile-container {
+  margin: 30px auto; 
+  width:60%; 
+  border: 1px solid #444;
+  display: flex;
+  padding: 1.3em; 
+}
+
+
+
+
+
+
+
+
+
+
+    

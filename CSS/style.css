@@ -1,0 +1,66 @@
+/*Caja que contiene los perfiles*/
+
+body{
+
+    background-image: url(https://i.ibb.co/1XZpSHH/3955269.jpg); 
+  }
+.profile-container {
+    margin: 30px auto; 
+    width:60%; /*Cambia esto para alterar el ancho, yo pense que esto va mas o menos acorde a la plantilla*/
+    border: 1px solid #444;
+    display: flex;
+    padding: 1.3em; /*Este padding es porcentual, para que se nivele al tamaño del texto,*/
+}
+
+.profile-container img {
+    width: 30%; 
+    border-radius: 50%; 
+    height: 30%;
+    margin: 0 auto;
+}
+
+.profile-data ul {
+    list-style: none;
+    text-align: left; 
+}
+
+.profile-data li {
+    line-height: 1.5em;
+    font: sans-serif;
+}
+
+/*Aqui va lo de las redes sociales*/
+
+.rrss-container {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    height: 50px;
+    
+}
+
+.rrss {
+    width: 10%; 
+    overflow: hidden; 
+    margin: auto;
+}
+
+.rrss img {
+    height: 100%; 
+    width: 100%;
+    border-radius:50%;
+}
+
+a{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    color: black;
+    background-color:transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: white;
+  
+  }

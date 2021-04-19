@@ -1,0 +1,11 @@
+body{
+    background-image: url(https://s1.1zoom.me/b6650/932/Dogs_German_Shepherd_534159_1920x1080.jpg);
+}
+
+div#perritos{
+    margin-top: 2%;
+    color: white;
+    float: center;
+  padding: 10px;
+  width: 100%;
+}
