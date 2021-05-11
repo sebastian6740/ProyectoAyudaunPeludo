@@ -17,11 +17,16 @@ $("#formulario").submit(function(){
  var mensaje ="";
 
  if($("#username").val().trim().length==0){
-   mensaje = "El nombre esta vacio";
+   mensaje = "El campo del nombre esta vacio";
  }
- if($("#email").val().trim().length==0){
-   mensaje = "El Email esta vacio";
+ if($("#exampleInputEmail1").val().trim().length==0){
+   mensaje = "El campo del Email esta vacio";
  }
+ if($("#inputPassword5").val().trim().length==0){
+   mensaje = "El campo de la contraseña esta vacia";
+ }
+
+ 
 
  if(mensaje !="")
  {
@@ -89,21 +94,22 @@ $("#formulario").submit(function(){
       <center><h1 style="background-color: #2a3944;color: white;">REGISTRATE Y SUMATE A NUESTRA ORGANIZACIÓN</h1></center>
     <form method="post" action="procesar.php" id="formulario">
 
-        <ul>
-            <label for="username">Nombre Completo</label>
-            <input type="text" class="form-control" id="username" name="username">
+      <ul>
+        <label for="username">Nombre Completo</label>
+          <div class="row">
+            <input type="text" class="form-control" id="username" name="username" required="" >
+          </div>
             
-        </ul>
+      </ul>
 
         
 
     
         <ul>
-         
-            <div class="mb-3">
-                <label for="email">Escribe tu email</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
-            </div>
+          <div class="row">
+            <label for="email">Escribe tu email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required="" >
+          </div>
         
         </ul>
 
@@ -111,9 +117,9 @@ $("#formulario").submit(function(){
       
 
 
-        <ul>
-            
-            <label for="exampleInputEmail1" class="form-label">Rut o Pasaporte</label>
+        
+        
+            <label for="exampleInputEmail1" class="form-label">Rut o Pasaporte (Si termina en K ponga un 0)</label>
             <div class="input-group mb-3">
                 <select class="form-select" id="inputGroupSelect02">
                     <option selected>...</option>   
@@ -121,7 +127,7 @@ $("#formulario").submit(function(){
                     <option value="2">Pasaporte</option>
                 </select>
                 <label for="..."></label>
-                <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" name="exampleInputEmail1">
+                <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" name="exampleInputEmail1" required=""  >
             </div>
         
             <label for="exampleInputEmail1" class="form-label">Numero de Telefono</label>
@@ -134,26 +140,26 @@ $("#formulario").submit(function(){
                 </select>
                 <label for=""></label>
                 <input type="text" placeholder="">
-                <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" name="exampleInputEmail1">
+                <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" name="exampleInputEmail1" required="">
             </div>
-        </ul>
+        
 
 
-        <ul>
-            <label for="exampleInputEmail1" class="form-label">Region de recidencia</label>
-            <div class="input-group mb-3">
+        
+          <div class="input-group mb-3">
+            <label for="exampleInputEmail1" class="form-label" required="">Region de recidencia</label>
                 <select class="form-select" id="inputGroupSelect02">
                     <option selected>...</option>   
                     <option value="1">Metropolitana</option>
                     <option value="2">Arica</option>
-                    <option value="3">Tarapaca</option>
+                    <option value="3">Tarapaca</option>1
                     <option value="4">Antofagasta</option>
                     <option value="5">Atacama</option>
                     <option value="6">Coquimbo</option>
                     <option value="7">Valparaiso</option>
                     <option value="8">O'Higgins</option>
                 </select>
-                <label for="exampleInputEmail1" class="form-label">Ciudad de recidencia</label>
+                <label for="exampleInputEmail1" class="form-label" required="">Ciudad de recidencia</label>
                 <select class="form-select" id="inputGroupSelect02">
                     <option selected>...</option>   
                     <option value="1">Santiago</option>
@@ -165,7 +171,7 @@ $("#formulario").submit(function(){
                     <option value="7">Antofagasta</option>
                     <option value="8">Rancagua</option>
                 </select>
-                <label for="exampleInputEmail1" class="form-label">Comuna de recidencia</label>
+                <label for="exampleInputEmail1" class="form-label" required="">Comuna de recidencia</label>
                 <select class="form-select" id="inputGroupSelect02">
                     <option selected>...</option>   
                     <option value="1">Cerrillo</option>
@@ -177,14 +183,13 @@ $("#formulario").submit(function(){
                     <option value="7">Independencia</option>
                     <option value="8">La cisterna</option>
                 </select>
-                
-            </div>
-        </ul>
+          </div>
+        
 
       
         <ul>
-            <label for="inputPassword5" class="form-label">Contraseña</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          <label for="inputPassword5" class="form-label">Contraseña</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required="" pattern=" [a-zA-Z0-9]">
         
             <div id="passwordHelpBlock" class="form-text">
                 Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji.
